@@ -10,4 +10,7 @@ describe( "The sonar sweep function", () => {
 	it( "counts the number of increases for an array with 2 items, with an increase", () => {
 		expect( sonar_sweep( [ 3, 5 ] ) ).toEqual( 1 );
 	} );
+	it( "counts the number of increases for an array with 4 items, with two increases", () => {
+		expect( sonar_sweep( [ 3, 5, 2, 4 ] ) ).toEqual( 2 );
+	} );
 } );
