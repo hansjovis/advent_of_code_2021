@@ -1,0 +1,11 @@
+{
+  "name": "advent_of_code_2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hans-Christiaan <hans-christiaan@yoast.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "jest": "^27.4.2"
+  }
+}
