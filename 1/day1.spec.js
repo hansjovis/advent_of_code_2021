@@ -1,4 +1,5 @@
 const sonar_sweep = require( "./day1.js" );
+const fs = require( "fs" );
 
 describe( "The sonar sweep function", () => {
 	it( "counts the number of increases for an empty array", () => {
@@ -18,5 +19,11 @@ describe( "The sonar sweep function", () => {
 	} );
 	it( "counts the number of increases for an array with seven increases", () => {
 		expect( sonar_sweep( [ 199, 200, 208, 210, 200, 207, 240, 269, 260, 263 ] ) ).toEqual( 7 );
+	} );
+	it( "counts the number of increases", () => {
+		const input = fs.readFileSync( "1/input.txt", "utf-8" );
+		const data = input.split( "\n" ).map( Number );
+
+		expect( sonar_sweep( data ) ).toEqual( 1477 );
 	} );
 } );
