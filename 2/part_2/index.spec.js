@@ -1,4 +1,4 @@
-const calculate_position = require( "./day2-1.js" );
+const calculate_position = require( "./index.js" );
 const fs = require( "fs" );
 
 describe( "The calculate_position function", () => {
@@ -17,7 +17,7 @@ describe( "The calculate_position function", () => {
 			[ "down", 8 ],
 			[ "forward", 2 ],
 		];
-		expect( calculate_position( input ) ).toEqual( { x: 15, depth: 10 } );
+		expect( calculate_position( input ) ).toEqual( { x: 15, depth: 60 } );
 	} );
 	it( "counts the number of increases", () => {
 		const input = fs.readFileSync( "2/input.txt", "utf-8" );
@@ -28,10 +28,10 @@ describe( "The calculate_position function", () => {
 			return [ direction, Number( steps ) ];
 		} );
 
-		const result = calculate_position( data )
+		const result = calculate_position( data );
 
 		expect( result ).toEqual( {
-			"depth": 933,
+			"depth": 738712,
 			"x": 2165
 		} );
 
