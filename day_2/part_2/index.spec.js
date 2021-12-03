@@ -1,4 +1,4 @@
-const calculate_position = require( "./index.js" );
+const calculate_position = require( "." );
 const fs = require( "fs" );
 
 describe( "The calculate_position function", () => {
@@ -19,8 +19,8 @@ describe( "The calculate_position function", () => {
 		];
 		expect( calculate_position( input ) ).toEqual( { x: 15, depth: 60 } );
 	} );
-	it( "counts the number of increases", () => {
-		const input = fs.readFileSync( "2/input.txt", "utf-8" );
+	it( "gives back a position, given the advent calendar input.", () => {
+		const input = fs.readFileSync( "day_2/input.txt", "utf-8" );
 
 		let data = input.split( "\n" );
 		data = data.map( line => {
